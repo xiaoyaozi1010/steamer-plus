@@ -1,0 +1,49 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "allowUmdGlobalAccess": true,
+        "allowUnusedLabels": false,
+        "alwaysStrict": true,
+        "charset": "utf8",
+        "checkJs": true,
+        "downlevelIteration": true,
+        // 启用babel生态兼容
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "strict": true,
+        "noImplicitAny": true,
+        "noEmit": true,
+        "allowJs": true,
+        "noEmitOnError": true,
+        "target": "es5",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "lib": [
+            "DOM",
+            "ES2018.Promise",
+            "ES2017"
+        ],
+        "listEmittedFiles": true,
+        "locale": "zh-CN",
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true, // 通过将文件写入磁盘来实现增量编译
+        "isolatedModules": true,
+        "preserveConstEnums": true,
+        "resolveJsonModule": true,
+        "removeComments": false,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "version": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./src"
+    ]
+}

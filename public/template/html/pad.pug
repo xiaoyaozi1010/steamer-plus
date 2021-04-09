@@ -1,0 +1,34 @@
+doctype html
+html(lang="zh")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style", content="yes")
+        meta(name="format-detection", content="telephone=no, email=no")
+        title #{title}
+        meta(name="keywords", content="")
+        meta(name="description", content="")
+        meta(name="author", content="")
+        //- css chunks 插入
+        each cssUrl in cssChunks
+            link(rel="stylesheet", href= cssUrl)
+        script
+            include ../js/simple-a.js
+        script
+            include ../js/simple-b.js
+    body
+        #pages(class="cm-page-wrap", style="overflow:hidden")
+        include ./fragments/fragment-a.html
+        include ./fragments/fragment-b.html
+        //- notification
+        #notifications
+        //- account
+        #accountContainer
+        //- login
+        #loginContainer
+        //- share
+        #doc-sharebox-container
+        #transfer-auth-container
+        each jsUrl in jsChunks
+            script(src= jsUrl)

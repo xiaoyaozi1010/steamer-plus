@@ -1,0 +1,415 @@
+body {
+    background: #f7f8f9;
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cm-page-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.nosupprt {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #bfbfbf;
+    visibility: visible;
+    z-index: 99;
+}
+
+.suggest-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -204px;
+    text-align: center;
+}
+
+.suggest-content {
+    margin-bottom: 30px;
+}
+
+.suggest-wrap-p {
+    margin: 5px;
+    padding: 0;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.suggest-wrap-img {
+    width: 170px;
+    margin-left: -60px;
+    background-color: #f7f8f9;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/**
+        * DUI 样式，除收集表外其他都删掉
+        */
+.dui-button-size-large {
+    height: 38px;
+    min-width: 160px;
+}
+
+.dui-button-type-primary {
+    background: #0188FB;
+    color: #fff;
+}
+
+.dui-button {
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    font-size: 16px;
+    padding: 0 20px;
+    color: #fff;
+}
+
+#download {
+    display: block;
+    width: 160px;
+    height: 38px;
+    position: absolute;
+    left: 120px;
+}
+
+/**
+    * 增长需求，loading展示小技巧 start
+    */
+.dui-spin-first-loading {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.dui-spin-first-loading-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+}
+
+.dui-spin-first-loading-circle-dark {
+    border: 4px solid rgba(0, 0, 0, 0.12);
+    border-top-color: rgba(0, 0, 0, 0.32);
+}
+
+.dui-spin-first-loading-circle {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: dui-spin-first-loading-rotate 0.8s infinite linear;
+    animation: dui-spin-first-loading-rotate 0.8s infinite linear;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@keyframes dui-spin-first-loading-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.first-screen-loading-text {
+    margin-top: 20px;
+}
+
+.first-screen-loading-text span {
+    padding: 2px 5px;
+    margin: 0 5px;
+    border-radius: 3px;
+    background-color: #ececed;
+}
+
+/**
+    * 增长需求，loading展示小技巧 end
+    */
+
+/**
+    * loading 体验优化
+    */
+.pre-page-container {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000;
+    background-color: #f9fafb;
+}
+
+.pre-page-header {
+    width: 100%;
+    height: 56px;
+    border-bottom: solid 1px #08080814;
+    box-sizing: inherit;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    top: 0;
+    padding: 0 20px 0 12px;
+}
+
+.pre-back-logo-container {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.pre-brand-back {
+    width: 16px;
+    height: 16px;
+}
+
+.pre-brand-logo {
+    height: 60px;
+    width: 60px;
+    transform: scale(0.533);
+    background-position: 0 0;
+    background-size: 60px 60px;
+    margin-left: -10px;
+}
+
+.pre-page-header-tool {
+    width: 100%;
+    height: 44px;
+    box-sizing: inherit;
+    border-bottom: solid 1px #08080814;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+}
+
+.pre-page-loading-container {
+    height: 100%;
+    display: flex;
+    box-sizing: inherit;
+    background-color: #fafbfc;
+}
+
+.first-loading-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10003;
+}
+
+.first-loading-spin-wrapper {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 48px;
+    height: 48px;
+}
+
+.first-loading-spin-circle {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: dui-spin-first-loading-rotate 0.8s infinite linear;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0.12);
+    border-top-color: rgba(0, 0, 0, 0.32);
+}
+
+.pre-page-header-right {
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.pre-icon-container {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.pre-icon {
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+}
+
+.disabled {
+    opacity: 0.2;
+}
+
+.pre-share-button {
+    font-family: PingFangSC-Medium;
+    width: 64px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 2px;
+    color: #fff;
+    border: 0;
+    cursor: not-allowed;
+    background-color: #1e6fff;
+    font-weight: 400;
+    margin: 0 8px;
+}
+
+.divider {
+    width: 1px;
+    height: 18px;
+    background: rgba(0, 0, 0, 0.06);
+    margin: 0 8px;
+}
+
+.pre-avatar {
+    box-sizing: border-box;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #ececec;
+    background: #ececec;
+    margin-left: 8px;
+}
+
+.pre-toolbar-icon {
+    width: 40px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pre-dropdown-icon {
+    width: 26px;
+    height: 24px;
+    margin-left: 7px;
+}
+
+.pre-dropdown {
+    width: 10px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+.pre-page-content-container {
+    position: fixed;
+    width: 100%;
+    top: 100px;
+    height: calc(100% - 125px);
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    z-index: 100;
+}
+
+.pre-page-content-list {
+    left: 0;
+    width: 180px;
+    height: 100%;
+    box-sizing: inherit;
+}
+
+.pre-page-content-slide {
+    height: 100%;
+    position: relative;
+    flex: 1 1 auto;
+    order: 2;
+    box-sizing: inherit;
+}
+
+.pre-page-slide-container {
+    position: absolute;
+    background-color: #f2f2f2;
+    top: 0;
+    bottom: 81px;
+    width: 100%;
+    box-sizing: inherit;
+}
+
+.pre-page-slide-content {
+    position: absolute;
+    background-color: #f2f2f2;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.06);
+    margin: 0 8px;
+}
+
+.snack-loading-container {
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 12px 10px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08);
+    background: #fff;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 10003;
+}
+
+.snack-loading-spin-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translate(0, -50%);
+    width: 16px;
+    height: 16px;
+}
+
+.snack-loading-container .first-loading-spin-circle {
+    border-width: 2px;
+}

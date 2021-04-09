@@ -1,0 +1,48 @@
+{
+    "root": true,
+    "extends": [
+        "@tencent/eslint-config-tencent",
+        "@tencent/eslint-config-tencent/ts",
+        "plugin:jest/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": "./tsconfig.json"
+    },
+    "env": {
+        "browser": true,
+        "mocha": true,
+        "node": true,
+        "jest": true
+    },
+    "plugins": [
+        "jest"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "jest/no-commented-out-tests": "off"
+    },
+    "globals": {
+    },
+    "overrides": [
+        {
+            "files": ["./scripts"],
+            "rules": {
+                "@typescript-eslint/no-require-imports": "off"
+            }
+        }
+    ]
+}
